@@ -1,0 +1,79 @@
+/* style.css */
+body {
+    font-size: 2.25em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+    text-align: center;
+    background-color: #f4f4f4;
+    color: #333; /* Soft text color for better readability */
+}
+
+#gameBoard {
+    margin: 20px auto;
+    width: 320px;
+    padding: 20px;
+    border: 1px solid #e0e0e0; /* Softer border color */
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+}
+
+#boxNumbers {
+    display: flex;
+    flex-wrap: wrap; /* Wrap boxes for smaller screens */
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.box {
+    margin: 5px;
+    padding: 15px; /* Increased padding for a better look */
+    border: 1px solid #ddd; /* Softer border */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s; /* Added transform transition */
+    border-radius: 4px; /* Slightly rounded corners for boxes */
+}
+
+.box:hover {
+    transform: translateY(-2px); /* Subtle hover effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+.selected {
+    background-color: #4CAF50; /* Green background for selected boxes */
+    color: white;
+}
+
+.disabled {
+    background-color: #f44336; /* Red background for disabled boxes */
+    color: white;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.closed {
+    background-color: #aaa; /* Gray background for closed boxes */
+    color: #fff;
+    cursor: not-allowed;
+}
+
+/* Optional: Style for dice area and reset button */
+#diceArea, #endTurn, button{
+    margin-top: 20px;
+    font-size: 1em;
+    padding: 10px 15px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#diceArea:hover, #endTurn:hover {
+    background-color: #388E3C; /* Darker shade on hover */
+}
+
+#rollDice {
+    background-color: #fff;
+    color: #4CAF50;
+}
